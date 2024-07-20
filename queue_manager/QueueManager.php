@@ -64,7 +64,6 @@ class QueueManager extends DbConnector
         $this->Stop();
     }
 
-    #[NoReturn]
     public function Email(): void
     {
         $this->queue_id = 1;
@@ -72,7 +71,6 @@ class QueueManager extends DbConnector
         $this->CronStart();
     }
 
-    #[NoReturn]
     public function SmsPhone(): void
     {
         $this->queue_id = 2;
@@ -80,7 +78,6 @@ class QueueManager extends DbConnector
         $this->CronStart();
     }
 
-    #[NoReturn]
     public function FcmMessage(): void
     {
         $this->queue_id = 3;
@@ -127,7 +124,6 @@ class QueueManager extends DbConnector
         }
     }
 
-    #[NoReturn]
     private function CronStart(): void
     {
         if ($this->redis_queue_status) {
