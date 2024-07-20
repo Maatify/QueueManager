@@ -71,14 +71,14 @@ class QueueManager extends DbConnector
         $this->CronStart();
     }
 
-    public function SmsPhone(): void
+    public function Sms(): void
     {
         $this->queue_id = 2;
         $this->redis_queue_cache_key = 'sms';
         $this->CronStart();
     }
 
-    public function FcmMessage(): void
+    public function Fcm(): void
     {
         $this->queue_id = 3;
         $this->redis_queue_cache_key = 'fcm';
