@@ -41,7 +41,10 @@ INSERT INTO `queue_manager` (`queue_id`, `description`, `timestamp`)
         (2, 'sms', ''),
         (3, 'fcm', ''),
         (4, 'payment', ''),
-        (5, 'order', '');
+        (5, 'order', ''),
+        (6, 'telegram-bot-admin', ''),
+        (7, 'telegram-bot-customer', ''),
+        (8, 'telegram-bot-subscriber', '');
 
 --
 -- Indexes for dumped tables
