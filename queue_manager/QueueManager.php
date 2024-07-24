@@ -113,6 +113,13 @@ class QueueManager extends DbConnector
         $this->CronStart();
     }
 
+    public function TelegramBotSubscriber(): void
+    {
+        $this->queue_id = 8;
+        $this->redis_queue_cache_key = 'telegram_bot_subscriber';
+        $this->CronStart();
+    }
+
     private function Stop(): void
     {
         if ($this->redis_queue_status) {
