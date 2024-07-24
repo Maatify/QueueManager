@@ -35,7 +35,7 @@ class RedisQueueHandler
     public function __construct()
     {
         if ($this->redis_active === null) {
-            if (extension_loaded('redis')) {
+            if (!empty($_ENV['REDIS_ACTIVE']) && extension_loaded('redis')) {
                 $this->redis_active = true;
             } else {
                 $this->redis_active = false;
