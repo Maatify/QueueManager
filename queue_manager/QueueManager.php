@@ -33,15 +33,15 @@ class QueueManager extends DbConnector
     protected string $tableAlias = self::TABLE_ALIAS;
     protected string $identify_table_id_col_name = self::IDENTIFY_TABLE_ID_COL_NAME;
     protected array $cols = self::Cols;
-    private int $time;
-    private int $timeout = 59;
+    protected int $time;
+    protected int $timeout = 59;
 
-    private RedisQueueHandler $redisQueue;
+    protected RedisQueueHandler $redisQueue;
 
     private static self $instance;
-    private int $queue_id;
-    private string $redis_queue_cache_key;
-    private bool $redis_queue_status;
+    protected int $queue_id;
+    protected string $redis_queue_cache_key;
+    protected bool $redis_queue_status;
 
     public static function obj(): self
     {
@@ -145,7 +145,7 @@ class QueueManager extends DbConnector
         }
     }
 
-    private function CronStart(): void
+    protected function CronStart(): void
     {
         if ($this->redis_queue_status) {
             $this->redisQueue->SetCronQueueByKey($this->redis_queue_cache_key);
