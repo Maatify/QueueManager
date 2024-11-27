@@ -130,7 +130,7 @@ class QueueManager extends DbConnector
         }
     }
 
-    private function Start(): void
+    protected function Start(): void
     {
         if ($this->redis_queue_status) {
             $this->redisQueue->SetQueueByKey($this->redis_queue_cache_key);
