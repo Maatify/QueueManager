@@ -1,6 +1,6 @@
 {  "name": "maatify/queue-manager",
   "description": "PHP library for Queue Redis And Db Manager handler, known by our team",
-  "version": "1.0.009",
+  "version": "5.0.1",
   "type": "library",
   "keywords": [
     "PHP",
@@ -44,18 +44,9 @@
       "role": "IOS Developer"
     }
   ],
-  "config": {
-    "platform": {
-      "php": "8.0.0"
-    }
-  },
   "require": {
-    "php": ">=8.0",
-    "maatify/logger": "^1.0",
-    "maatify/functions": "^1.2",
-    "maatify/db-model-v3": "^1.2",
     "ext-openssl": "*",
-    "maatify/redis": "^1.0"
+    "maatify/redis": "^5.0"
   },
   "autoload": {
     "psr-4": {
